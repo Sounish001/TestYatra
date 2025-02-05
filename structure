@@ -1,0 +1,50 @@
+jee-testing-website/
+│
+├── backend/                         # Spring Boot backend
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/
+│   │   │   │       └── example/
+│   │   │   │           └── jeeproject/
+│   │   │   │               ├── JeeProjectApplication.java
+│   │   │   │               ├── config/          # (e.g., security, CORS config)
+│   │   │   │               ├── controller/      # REST controllers
+│   │   │   │               │    └── UserController.java
+│   │   │   │               ├── model/           # JPA entities
+│   │   │   │               │    └── User.java
+│   │   │   │               ├── repository/      # Spring Data repositories
+│   │   │   │               │    └── UserRepository.java
+│   │   │   │               ├── service/         # Business logic services (if needed)
+│   │   │   │               └── util/            # Utility classes
+│   │   │   └── resources/
+│   │   │       └── application.properties       # Spring Boot properties
+│   │   └── test/
+│   │       └── java/                              # Test classes
+│   │           └── com/
+│   │               └── example/
+│   │                   └── jeeproject/
+│   ├── pom.xml                                  # Maven build file
+│   └── README-backend.md
+│
+├── frontend/                        # React frontend
+│   ├── public/
+│   │   ├── index.html
+│   │   └── favicon.ico
+│   ├── src/
+│   │   ├── assets/                  # (images, fonts, etc.)
+│   │   ├── components/              # Reusable components (e.g., Header, Footer)
+│   │   ├── pages/                   # Page-level components (Home, Login, Register)
+│   │   │   ├── Home.js
+│   │   │   ├── Login.js
+│   │   │   └── Register.js
+│   │   ├── services/                # API service calls
+│   │   │   └── userService.js
+│   │   ├── App.js                   # Main app component with routing
+│   │   └── index.js                 # React entry point
+│   ├── package.json
+│   ├── .env                       # Environment variables (e.g., API URL)
+│   └── README-frontend.md
+│
+├── docker-compose.yml               # (Optional) Docker configuration for multi-container deployment
+└── README.md                        # Project overview and setup instructions
