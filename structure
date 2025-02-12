@@ -1,56 +1,61 @@
-jee-test-generator/
-│── 📁 frontend/              # React (Next.js) frontend
-│   ├── 📁 public/            # Static assets (logos, images)
+TestYatra/                     # Root project directory
+│── 📁 frontend/               # Next.js (React) frontend
+│   ├── 📁 public/             # Static assets (logos, images)
 │   ├── 📁 src/
-│   │   ├── 📁 components/    # Reusable UI components
-│   │   ├── 📁 pages/         # Next.js page-based routing
-│   │   │   ├── 📄 index.js   # Home page
-│   │   │   ├── 📄 test.js    # Test creation page
-│   │   │   ├── 📄 dashboard.js  # User dashboard
-│   │   ├── 📁 hooks/         # Custom React hooks
-│   │   ├── 📁 utils/         # Helper functions (e.g., API calls)
-│   │   ├── 📁 context/       # Global state management (Context API)
-│   │   ├── 📁 styles/        # CSS/Tailwind styles
-│   │   ├── 📁 config/        # API configuration
-│   │   ├── 📄 _app.js        # Main App component
-│   │   ├── 📄 _document.js   # Custom Document component
-│   ├── 📄 package.json       # Frontend dependencies
-│   ├── 📄 next.config.js     # Next.js configuration
+│   │   ├── 📁 components/     # Reusable UI components
+│   │   ├── 📁 pages/          # Next.js pages (Routing)
+│   │   │   ├── 📄 index.js    # Home page
+│   │   │   ├── 📄 test.js     # Test creation page
+│   │   │   ├── 📄 dashboard.js # User dashboard
+│   │   ├── 📁 hooks/          # Custom React hooks
+│   │   ├── 📁 utils/          # Helper functions (API calls)
+│   │   ├── 📁 context/        # Global state (Context API)
+│   │   ├── 📁 styles/         # TailwindCSS styles
+│   │   ├── 📁 config/         # API configuration
+│   │   ├── 📄 _app.js         # Main App component
+│   │   ├── 📄 _document.js    # Custom Document component
+│   ├── 📄 package.json        # Frontend dependencies
+│   ├── 📄 next.config.js      # Next.js config
+│   ├── 📄 tailwind.config.js  # TailwindCSS config
+│   ├── 📄 postcss.config.js   # PostCSS config
+│   ├── 📄 .env.local          # Environment variables
 │
-│── 📁 backend/               # Node.js (Express) backend
+│── 📁 backend/                # Node.js (Express) backend
 │   ├── 📁 src/
-│   │   ├── 📁 controllers/   # Business logic (e.g., testController.js)
-│   │   ├── 📁 models/        # Database models (MongoDB)
-│   │   ├── 📁 routes/        # API routes
-│   │   ├── 📁 middleware/    # Authentication & error handling
-│   │   ├── 📁 utils/         # Utility functions (e.g., file handling)
-│   │   ├── 📁 config/        # Environment variables & DB connection
-│   │   ├── 📄 server.js      # Main Express server
-│   ├── 📄 package.json       # Backend dependencies
-│   ├── 📄 .env               # Environment variables
+│   │   ├── 📁 controllers/    # Business logic (e.g., testController.js)
+│   │   ├── 📁 models/         # MongoDB models (Schemas)
+│   │   ├── 📁 routes/         # API routes
+│   │   ├── 📁 middleware/     # Authentication & error handling
+│   │   ├── 📁 utils/          # Utility functions
+│   │   ├── 📁 config/         # Environment variables, DB connection
+│   │   ├── 📄 server.js       # Main Express server
+│   ├── 📄 package.json        # Backend dependencies
+│   ├── 📄 .env                # Backend environment variables
+│   ├── 📄 nodemon.json        # Nodemon config (for development)
 │
-│── 📁 ai-engine/             # AI-powered features (Python + FastAPI)
-│   ├── 📁 models/            # AI models (OCR, NLP, recommendation)
-│   ├── 📁 scripts/           # Python scripts for data processing
-│   ├── 📁 api/               # FastAPI server for AI processing
-│   │   ├── 📄 main.py        # FastAPI main entry point
-│   ├── 📁 data/              # Pre-trained model files
-│   ├── 📄 requirements.txt   # Python dependencies
+│── 📁 ai-engine/              # AI-powered test generation (FastAPI)
+│   ├── 📁 models/             # AI models (OCR, NLP, recommendation)
+│   ├── 📁 scripts/            # Python scripts for AI processing
+│   ├── 📁 api/                # FastAPI server for AI
+│   │   ├── 📄 main.py         # FastAPI main entry point
+│   ├── 📁 data/               # Pre-trained model files
+│   ├── 📄 requirements.txt    # Python dependencies
+│   ├── 📄 .env                # AI service environment variables
 │
-│── 📁 database/              # MongoDB data storage
-│   ├── 📄 schema.js          # Database schema setup
-│   ├── 📄 connection.js      # MongoDB connection
+│── 📁 database/               # MongoDB data storage
+│   ├── 📄 schema.js           # Database schema setup
+│   ├── 📄 connection.js       # MongoDB connection
 │
-│── 📁 scripts/               # DevOps & automation scripts
-│   ├── 📄 deploy.sh          # Deployment script
-│   ├── 📄 backup.sh          # Database backup script
+│── 📁 scripts/                # DevOps & automation scripts
+│   ├── 📄 deploy.sh           # Deployment script
+│   ├── 📄 backup.sh           # Database backup script
 │
-│── 📁 docs/                  # Documentation
-│   ├── 📄 README.md          # Project documentation
-│   ├── 📄 API_DOCS.md        # API endpoints documentation
+│── 📁 docs/                   # Documentation
+│   ├── 📄 README.md           # Project documentation
+│   ├── 📄 API_DOCS.md         # API endpoints documentation
 │
-│── 📄 .gitignore             # Git ignore files
-│── 📄 README.md              # Main project documentation
-│── 📄 package.json           # Project dependencies
-│── 📄 docker-compose.yml     # Docker setup (optional)
-│── 📄 ecosystem.config.js    # PM2 process manager config (optional)
+│── 📄 .gitignore              # Ignore node_modules, .env files
+│── 📄 README.md               # Main project documentation
+│── 📄 package.json            # Project dependencies
+│── 📄 docker-compose.yml      # Docker setup (optional)
+│── 📄 ecosystem.config.js     # PM2 process manager config (optional)
